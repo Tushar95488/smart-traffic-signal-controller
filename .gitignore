@@ -1,0 +1,20 @@
+# Python virtual environment
+.venv/
+
+# Python cache and test cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local videos and generated recordings
+videos/
+*.mp4
+*.avi
+*.mov
+
+# Private configuration
+.env
+
+# Editor-specific local settings
+.vscode/

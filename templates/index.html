@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Traffic Signal Controller</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+    <header>
+        <div>
+            <p class="tag">AI + ML + COMPUTER VISION</p>
+            <h1>Smart Traffic Signal Controller</h1>
+            <p class="subtitle">
+                Real-Time Adaptive Traffic Simulation
+            </p>
+        </div>
+
+        <div class="live-status">
+            <span></span>
+            SIMULATION LIVE
+        </div>
+    </header>
+
+    <main>
+        <section class="simulation-card">
+            <canvas
+                id="trafficCanvas"
+                width="800"
+                height="520"
+            ></canvas>
+
+            <p class="canvas-caption">
+                Animated four-way intersection simulation
+            </p>
+        </section>
+
+        <aside>
+            <section class="panel">
+                <p class="label">CURRENT SIGNAL</p>
+                <h2 id="signalPhase">Loading...</h2>
+                <p id="phaseDuration">Phase duration: 0 sec</p>
+            </section>
+
+            <section class="panel">
+                <p class="label">LIVE METRICS</p>
+
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <strong id="totalQueue">0</strong>
+                        <span>Vehicles queued</span>
+                    </div>
+
+                    <div class="metric">
+                        <strong id="departed">0</strong>
+                        <span>Vehicles passed</span>
+                    </div>
+
+                    <div class="metric">
+                        <strong id="averageWait">0</strong>
+                        <span>Average wait (sec)</span>
+                    </div>
+
+                    <div class="metric">
+                        <strong id="learnedStates">0</strong>
+                        <span>AI learned states</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <p class="label">SIMULATION CONTROLS</p>
+
+                <div class="button-group">
+                    <button id="pauseButton">Pause</button>
+                    <button id="stepButton">+1 Second</button>
+                    <button id="resetButton">Reset</button>
+                </div>
+            </section>
+
+            <section class="panel">
+                <p class="label">HOW THE AI WORKS</p>
+                <p class="description">
+                    Q-learning observes traffic queues and chooses the
+                    north-south or east-west green signal that helps reduce
+                    vehicle waiting time.
+                </p>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        Python • Flask • Q-Learning • OpenCV-ready
+    </footer>
+
+    <script
+        src="{{ url_for('static', filename='app.js') }}"
+    ></script>
+</body>
+</html>

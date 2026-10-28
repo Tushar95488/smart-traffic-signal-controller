@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes>
+    <!-- Realistic passenger-car behaviour -->
+    <vTypeDistribution id="traffic_cars">
+        <vType id="car_01" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_01.png" color="255,255,255"/>
+
+        <vType id="car_02" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_02.png" color="255,255,255"/>
+
+        <vType id="car_03" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_03.png" color="255,255,255"/>
+
+        <vType id="car_04" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_04.png" color="255,255,255"/>
+
+        <vType id="car_05" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_05.png" color="255,255,255"/>
+
+        <vType id="car_06" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_06.png" color="255,255,255"/>
+
+        <vType id="car_07" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_07.png" color="255,255,255"/>
+
+        <vType id="car_08" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_08.png" color="255,255,255"/>
+
+        <vType id="car_09" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_09.png" color="255,255,255"/>
+
+        <vType id="car_10" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_10.png" color="255,255,255"/>
+
+        <vType id="car_11" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_11.png" color="255,255,255"/>
+
+        <vType id="car_12" probability="1"
+            length="4.5" minGap="2.5" accel="2.6" decel="4.5"
+            sigma="0.5" maxSpeed="13.89" guiShape="passenger"
+            imgFile="assets/car_12.png" color="255,255,255"/>
+</vTypeDistribution>
+
+    <!-- North approach -->
+    <route id="north_straight" edges="north_in south_out"/>
+    <route id="north_left" edges="north_in east_out"/>
+    <route id="north_right" edges="north_in west_out"/>
+
+    <!-- South approach -->
+    <route id="south_straight" edges="south_in north_out"/>
+    <route id="south_left" edges="south_in west_out"/>
+    <route id="south_right" edges="south_in east_out"/>
+
+    <!-- East approach -->
+    <route id="east_straight" edges="east_in west_out"/>
+    <route id="east_left" edges="east_in south_out"/>
+    <route id="east_right" edges="east_in north_out"/>
+
+    <!-- West approach -->
+    <route id="west_straight" edges="west_in east_out"/>
+    <route id="west_left" edges="west_in north_out"/>
+    <route id="west_right" edges="west_in south_out"/>
+
+    <!-- Traffic demand: vehicles per hour -->
+    <flow id="north_straight_flow" type="traffic_cars" route="north_straight"
+          begin="0" end="600" vehsPerHour="600" departLane="best"/>
+
+    <flow id="north_left_flow" type="traffic_cars" route="north_left"
+          begin="0" end="600" vehsPerHour="180" departLane="best"/>
+
+    <flow id="south_straight_flow" type="traffic_cars" route="south_straight"
+          begin="0" end="600" vehsPerHour="480" departLane="best"/>
+
+    <flow id="south_right_flow" type="traffic_cars" route="south_right"
+          begin="0" end="600" vehsPerHour="150" departLane="best"/>
+
+    <flow id="east_straight_flow" type="traffic_cars" route="east_straight"
+          begin="0" end="600" vehsPerHour="500" departLane="best"/>
+
+    <flow id="east_left_flow" type="traffic_cars" route="east_left"
+          begin="0" end="600" vehsPerHour="200" departLane="best"/>
+
+    <flow id="west_straight_flow" type="traffic_cars" route="west_straight"
+          begin="0" end="600" vehsPerHour="450" departLane="best"/>
+
+    <flow id="west_right_flow" type="traffic_cars" route="west_right"
+          begin="0" end="600" vehsPerHour="140" departLane="best"/>
+</routes>
